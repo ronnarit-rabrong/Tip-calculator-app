@@ -1,5 +1,6 @@
 import { Display } from "./display";
 
+const display = new Display();
 export class Calculator {
   bill: number | null;
   count: number | null;
@@ -30,12 +31,14 @@ export class Calculator {
   }
 
   calc() {
-    if (this.bill !== null && this.count !== null && this.tip !== null) {
-      const tipPercentage = this.tip / 100;
-      const totalTip = this.bill * tipPercentage;
-      const amount = totalTip / this.count;
-      const total = (this.bill + totalTip) / this.count;
-      const display = new Display();
+    const bill = this.bill;
+    const count = this.count;
+    const tip = this.tip;
+    if (bill !== null && count !== null && tip !== null) {
+      const tipPercentage = tip / 100;
+      const totalTip = bill * tipPercentage;
+      const amount = totalTip / count;
+      const total = (bill + totalTip) / count;
       display.showResult(amount.toFixed(2), total.toFixed(2));
     }
   }
