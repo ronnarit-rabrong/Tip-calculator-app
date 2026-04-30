@@ -30,7 +30,7 @@ export class Calculator {
   }
 
   calc() {
-    if (this.bill && this.count && this.tip) {
+    if (this.bill !== null && this.count !== null && this.tip !== null) {
       const tipPercentage = this.tip / 100;
       const totalTip = this.bill * tipPercentage;
       const amount = totalTip / this.count;
