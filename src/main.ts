@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bill
    ---------------------------------------------------*/
   billFiedls.inputEl.addEventListener("keyup", () => {
-    const billVal = parseInt(billFiedls.inputEl.value);
+    const billVal = parseFloat(billFiedls.inputEl.value);
     const billValisNaN = Number.isNaN(billVal);
     if (!billValisNaN) {
       tipCalculator.setBill(billVal);
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   billFiedls.inputEl.addEventListener("focusout", () => {
-    const val = parseInt(billFiedls.inputEl.value);
+    const val = parseFloat(billFiedls.inputEl.value);
     if (val === 0) {
       return billFiedls.showError();
     }
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     count
    ---------------------------------------------------*/
   countFields.inputEl.addEventListener("keyup", () => {
-    const countVal = parseInt(countFields.inputEl.value);
+    const countVal = parseFloat(countFields.inputEl.value);
     const countValisNaN = Number.isNaN(countVal);
     if (!countValisNaN) {
       tipCalculator.setCount(countVal);
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   countFields.inputEl.addEventListener("focusout", () => {
-    const val = parseInt(countFields.inputEl.value);
+    const val = parseFloat(countFields.inputEl.value);
     if (val === 0) {
       return countFields.showError();
     }

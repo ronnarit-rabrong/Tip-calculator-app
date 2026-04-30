@@ -19,7 +19,7 @@ export class TipField {
 
   select(e: Event): void {
     const btnTaret = e.target as HTMLButtonElement;
-    const percentVal = parseInt(btnTaret.value.replace("%", ""));
+    const percentVal = parseFloat(btnTaret.value.replace("%", ""));
     const percentValIsNaN = Number.isNaN(percentVal);
     if (!percentValIsNaN) {
       this.percent = percentVal;
