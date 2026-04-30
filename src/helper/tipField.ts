@@ -1,13 +1,13 @@
 type TipFieldType = {
-  btnAll: HTMLButtonElement[];
-  btnNormal: HTMLButtonElement[];
-  btnCustom: HTMLButtonElement | HTMLInputElement;
+  btnAll: HTMLInputElement[];
+  btnNormal: HTMLInputElement[];
+  btnCustom: HTMLInputElement;
 };
 
 export class TipField {
-  btnAll: HTMLButtonElement[];
-  btnNormal: HTMLButtonElement[];
-  btnCustom: HTMLButtonElement | HTMLInputElement;
+  btnAll: HTMLInputElement[];
+  btnNormal: HTMLInputElement[];
+  btnCustom: HTMLInputElement;
   percent: number;
 
   constructor({ btnAll, btnNormal, btnCustom }: TipFieldType) {
@@ -18,7 +18,7 @@ export class TipField {
   }
 
   select(e: Event): void {
-    const btnTaret = e.target as HTMLButtonElement;
+    const btnTaret = e.target as HTMLInputElement;
     const percentVal = parseFloat(btnTaret.value.replace("%", ""));
     const percentValIsNaN = Number.isNaN(percentVal);
     if (!percentValIsNaN) {
@@ -27,7 +27,7 @@ export class TipField {
   }
 
   showActive(e: Event): void {
-    const btnTaret = e.target as HTMLButtonElement;
+    const btnTaret = e.target as HTMLInputElement;
     this.btnAll.forEach((btn) => btn.classList.remove("active"));
     btnTaret.classList.add("active");
   }

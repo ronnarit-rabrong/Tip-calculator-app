@@ -18,9 +18,9 @@ const countFields = new InputField({
 });
 
 const tipField = new TipField({
-  btnAll: Selector.getElementAll("[data-field-tip-alls]") as HTMLButtonElement[],
-  btnNormal: Selector.getElementAll("[data-field-tip]") as HTMLButtonElement[],
-  btnCustom: Selector.getElement("[data-field-tip-custom]") as HTMLButtonElement | HTMLInputElement,
+  btnAll: Selector.getElementAll("[data-field-tip-alls]") as HTMLInputElement[],
+  btnNormal: Selector.getElementAll("[data-field-tip]") as HTMLInputElement[],
+  btnCustom: Selector.getElement("[data-field-tip-custom]") as HTMLInputElement,
 });
 
 document.addEventListener("DOMContentLoaded", () => {
