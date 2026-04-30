@@ -30,6 +30,7 @@
     --clr-active-secondary: hsl(184, 19%, 68%);
     --clr-active-accent: hsl(172, 67%, 45%);
 
+    /* color for error*/
     --clr-error: hsl(13, 70%, 60%);
 }
 
