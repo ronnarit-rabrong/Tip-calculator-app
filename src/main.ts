@@ -13,7 +13,7 @@ const billFiedls = new InputField({
 });
 
 const countFields = new InputField({
-  inputEl: Selector.getElement("[data-field-count-input ]") as HTMLInputElement,
+  inputEl: Selector.getElement("[data-field-count-input]") as HTMLInputElement,
   errorEl: Selector.getElement("[data-field-count-error]") as HTMLSpanElement,
 });
 
