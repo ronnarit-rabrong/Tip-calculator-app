@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png" />
+      <title>Frontend Mentor | Tip calculator app</title>
+      <link rel="stylesheet" href="./src/style.css" />
+   </head>
+   <body>
+      <main class="main-site" id="app">
+         <h1 class="sr-only">Tip Calculator</h1>
+         <img class="logo" src="./src/assets/images/logo.svg" alt="" />
+
+         <!--   form               -->
+
+         <form class="form" id="form" data-form>
+            <section class="field">
+               <!--  bill              -->
+               <fieldset class="field-bill" data-field-bill>
+                  <label class="field-bill__label" for="bill">Bill</label>
+                  <span class="field-bill__error hide" data-field-bill-error> Can’t be zero </span>
+                  <input class="field-bill__input" id="bill" type="number" min="0" placeholder="0" data-field-bill-input />
+                  <img class="field-bill__icon" src="./src/assets/images/icon-dollar.svg" alt="" />
+               </fieldset>
+
+               <!--  tip              -->
+               <fieldset class="field-tip" data-field-tip>
+                  <p class="field-tip__text">Select Tip %</p>
+                  <div class="field-tip__btn-wrapper">
+                     <input class="field-tip__btn field-tip__btn--primary" type="button" value="5%" data-field-tip-alls data-field-tip />
+                     <input class="field-tip__btn field-tip__btn--primary" type="button" value="10%" data-field-tip-alls data-field-tip />
+                     <input class="field-tip__btn field-tip__btn--primary" type="button" value="15%" data-field-tip-alls data-field-tip />
+                     <input class="field-tip__btn field-tip__btn--primary" type="button" value="25%" data-field-tip-alls data-field-tip />
+                     <input class="field-tip__btn field-tip__btn--primary" type="button" value="50%" data-field-tip-alls data-field-tip />
+                     <input class="field-tip__btn field-tip__btn--secondary" type="button" value="Custom" data-field-tip-alls data-field-tip-custom />
+                  </div>
+               </fieldset>
+
+               <!-- count              -->
+               <fieldset class="field-count" data-field-count>
+                  <label class="field-count__label" for="count">Number of People</label>
+                  <span class="field-count__error hide" data-field-count-error>Can’t be zero</span>
+                  <input class="field-count__input" id="count" type="number" min="0" placeholder="0" data-field-count-input />
+                  <img class="field-count__icon" src="./src/assets/images/icon-person.svg" alt="" />
+               </fieldset>
+            </section>
+
+            <!-- calculator         -->
+            <section class="calculator">
+               <div class="calculator-container">
+                  <h2 class="calculator__text" aria-label="calculate tip per amount">Tip Amount</h2>
+                  <p class="calculator__parson">/ person</p>
+                  <p class="calculator__count" data-amount>$0.00</p>
+               </div>
+               <div class="calculator-container">
+                  <h2 class="calculator__text" aria-label="calculate total tip">Total</h2>
+                  <p class="calculator__parson">/ person</p>
+                  <p class="calculator__count" data-total>$0.00</p>
+               </div>
+               <button class="calculator__reset" type="reset" id="reset" data-btn-reset>Reset</button>
+            </section>
+         </form>
+      </main>
+      <script type="module" src="/src/main.ts"></script>
+   </body>
+</html>
